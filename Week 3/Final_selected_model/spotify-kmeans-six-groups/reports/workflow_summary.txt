@@ -1,0 +1,18 @@
+Fixed-model workflow
+
+Read tracks_clean.csv directly: 28,356 rows and 19 columns, with unique IDs.
+No deduplication, row filtering, or playlist reconstruction is performed.
+Use nine original continuous audio features.
+Split into training (17,013), validation (5,671), and test (5,672).
+Fit median imputation, StandardScaler, and six-group K-means on training.
+Add a training-only k=1 to 10 elbow curve for context, without selecting another k.
+Compute validation metrics and five 80% subsampling stability repeats.
+Refit on training plus validation, then evaluate the held-out test set.
+Refit on all tracks for delivery and save the model and song assignments.
+
+Validation silhouette: 0.1573
+Test silhouette: 0.1549
+Mean stability ARI: 0.9763
+
+Only one fixed model specification is implemented.
+No automatic mood labels or supervised classifier are implemented.

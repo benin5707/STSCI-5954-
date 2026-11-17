@@ -1,0 +1,19 @@
+# Local environments and Python caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Reproducible intermediate files
+temp/*
+!temp/.gitkeep
+# Local editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Local credentials
+.env
+.env.*
+!.env.example
+

@@ -1,0 +1,4 @@
+representation,dimensions,retained_training_variance
+original,9,1.0
+pca80,6,0.8439295546731359
+pca90,7,0.9133759250059539

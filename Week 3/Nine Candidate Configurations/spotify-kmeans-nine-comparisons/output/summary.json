@@ -1,0 +1,100 @@
+{
+  "raw_rows": 28356,
+  "unique_songs": 28356,
+  "duplicates_removed": 0,
+  "missing_metadata_songs": 4,
+  "zero_tempo_songs": 1,
+  "splits": {
+    "train": 17013,
+    "validation": 5671,
+    "test": 5672
+  },
+  "features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo"
+  ],
+  "seed": 42,
+  "model_grid_candidates": 9,
+  "elbow_diagnostic_k": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "elbow_scope": "Training-only; outside-range diagnostic fits are not comparison candidates",
+  "selection": {
+    "family": "KMeans",
+    "representation": "original",
+    "k": 6,
+    "dimensions": 9,
+    "silhouette": 0.15729102516297652,
+    "db": 1.6002247404524788,
+    "ch": 355.53711190827465,
+    "val_min_share": 0.06365720331511197,
+    "train_min_share": 0.06712513959913008,
+    "seconds": 0.185,
+    "warnings": "",
+    "eligible": true,
+    "stability_ARI_mean": 0.9763149040071634,
+    "stability_ARI_min": 0.9619968115988209,
+    "stability_ARI_sd": 0.008504817227043595,
+    "resample_min_cluster_share": 0.060835831423029445,
+    "ARI_repeats": "[0.9741919408074043, 0.9619968115988209, 0.9786208995865544, 0.9882263611858104, 0.9785385068572264]"
+  },
+  "test": {
+    "silhouette": 0.1549237242241796,
+    "db": 1.6117463203959244,
+    "ch": 355.2558811473174,
+    "cluster_counts": [
+      1492,
+      370,
+      432,
+      760,
+      811,
+      1807
+    ],
+    "ARI_to_train_only_model": 0.9815282776412981
+  },
+  "train_pca_cumulative": [
+    0.24151856936694788,
+    0.4096713220554914,
+    0.5307989635635706,
+    0.6407191721504546,
+    0.7487670744488857,
+    0.843929554673136,
+    0.9133759250059539,
+    0.9752591348566391,
+    0.9999999999999998
+  ],
+  "label_mapping": {
+    "3": 1,
+    "5": 2,
+    "2": 3,
+    "0": 4,
+    "4": 5,
+    "1": 6
+  },
+  "fit_warnings": [],
+  "final_warnings": [],
+  "versions": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "source_file": "tracks_clean.csv",
+  "input_already_cleaned": true
+}

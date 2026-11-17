@@ -1,0 +1,105 @@
+{
+  "input_file": "tracks_clean.csv",
+  "input_sha256": "20d47f4646fa9b35cec2ddcb1de848381439eefc26f9c84172441ef3ae189395",
+  "input_rows": 28356,
+  "input_columns": 19,
+  "unique_songs": 28356,
+  "precleaned_input": true,
+  "deduplication_applied": false,
+  "missing_metadata_songs": 4,
+  "zero_tempo_songs": 1,
+  "splits": {
+    "train": 17013,
+    "validation": 5671,
+    "test": 5672
+  },
+  "features": [
+    "danceability",
+    "energy",
+    "loudness",
+    "speechiness",
+    "acousticness",
+    "instrumentalness",
+    "liveness",
+    "valence",
+    "tempo"
+  ],
+  "seed": 42,
+  "model_configurations": 1,
+  "elbow_diagnostic_k": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "elbow_scope": "Training-only context; no automatic model selection",
+  "specification": {
+    "family": "KMeans",
+    "representation": "original",
+    "k": 6,
+    "dimensions": 9,
+    "n_init": 20
+  },
+  "validation": {
+    "silhouette": 0.15729102516296603,
+    "db": 1.6002247404524788,
+    "ch": 355.53711190827465,
+    "sample_size": 2500,
+    "cluster_counts": [
+      1400,
+      1869,
+      789,
+      473,
+      779,
+      361
+    ]
+  },
+  "stability": {
+    "ARI_mean": 0.9763149040071634,
+    "ARI_min": 0.9619968115988209,
+    "ARI_sd": 0.008504817227043595,
+    "repeats": 5,
+    "sample_fraction": 0.8,
+    "sampling": "without replacement",
+    "minimum_cluster_share": 0.060835831423029445
+  },
+  "test": {
+    "silhouette": 0.1549237242241796,
+    "db": 1.6117463203959244,
+    "ch": 355.2558811473174,
+    "cluster_counts": [
+      1492,
+      370,
+      432,
+      760,
+      811,
+      1807
+    ],
+    "ARI_to_train_only_model": 0.9815282776412981
+  },
+  "label_mapping": {
+    "3": 1,
+    "5": 2,
+    "2": 3,
+    "0": 4,
+    "4": 5,
+    "1": 6
+  },
+  "training_warnings": [
+    "Could not find the number of physical cores for the following reason:\nfound 0 physical cores < 1\nReturning the number of logical cores instead. You can silence this warning by setting LOKY_MAX_CPU_COUNT to the number of cores you want to use."
+  ],
+  "fit_warnings": [],
+  "final_warnings": [],
+  "versions": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}

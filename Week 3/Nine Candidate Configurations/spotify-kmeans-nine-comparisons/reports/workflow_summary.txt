@@ -1,0 +1,12 @@
+Nine K-means comparisons
+
+Three representations: original standardized 9D, PCA80, PCA90.
+Candidate cluster counts: 5, 6, 7.
+Training-only elbow diagnostic: k=1 through 10; no unique sharp elbow.
+PCA80: six components, 84.39% variance. PCA90: seven, 91.34%.
+Five stability subsamples per candidate: 45 repeats.
+Selected: Original standardized 9D, k=6.
+Validation silhouette: 0.1573.
+Test silhouette: 0.1549.
+Mean stability ARI: 0.9763.
+These are audio groups, not verified mood labels.

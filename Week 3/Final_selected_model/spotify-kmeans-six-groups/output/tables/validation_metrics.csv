@@ -1,0 +1,2 @@
+family,representation,k,dimensions,silhouette,db,ch,sample_size
+KMeans,original,6,9,0.15729102516296603,1.6002247404524788,355.53711190827465,2500
