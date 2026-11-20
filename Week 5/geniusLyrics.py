@@ -37,7 +37,7 @@ with (
     open("Data/failedGenius.jsonl", mode = "w", encoding = "utf-8") as FailF,
     ):
     #loop to query
-    for song in failed_songs[:1]:
+    for song in failed_songs:#comment [:1] to test with 1 track
         try:
             result = lyricWriter.search_song(song[0], song[1])
             #Check that it actually got something and not empty lyrics
