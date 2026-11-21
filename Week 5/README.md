@@ -19,7 +19,7 @@ Our objective this week was to
 - `extraSongs.csv`- songs that had `speechiness` above the .33 threshold. Discarded because lyrics existing for songs with speechiness values below the threshold indicated that speechiness alone was insufficient for determining whether a song contained lyrics.
 
 ## Methodology
-- 
+-
 ## Results
 
 ## Limitations and Obstacles
